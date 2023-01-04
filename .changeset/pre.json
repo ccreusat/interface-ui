@@ -1,0 +1,9 @@
+{
+  "mode": "pre",
+  "tag": "next",
+  "initialVersions": {
+    "playground": "0.0.0",
+    "@interface-ui/react": "0.0.0"
+  },
+  "changesets": []
+}

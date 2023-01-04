@@ -1,0 +1,47 @@
+{
+  "name": "@interface-ui/react",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint *.ts*",
+    "prebuild": "npx @svgr/cli assets --config-file ./svgr.config.cjs",
+    "build": "pnpm run prebuild && vite build"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./solid": {
+      "import": "./dist/solid.js",
+      "require": "./dist/solid.cjs"
+    },
+    "./duotone": {
+      "import": "./dist/duotone.js",
+      "require": "./dist/duotone.cjs"
+    }
+  },
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "*.d.ts"
+  ],
+  "sideEffects": false,
+  "type": "module",
+  "devDependencies": {
+    "@svgr/cli": "6.5.1",
+    "@types/node": "18.7.16",
+    "@types/react": "18.0.17",
+    "@types/react-dom": "18.0.6",
+    "@vitejs/plugin-react": "3.0.0",
+    "eslint": "7.32.0",
+    "react": "18.2.0",
+    "vite": "4.0.0",
+    "vite-plugin-dts": "1.6.6"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
